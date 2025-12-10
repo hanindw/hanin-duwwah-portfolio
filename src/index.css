@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Navy/Dark Blue inspired by avatar background */
+    --background: 222 47% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Pink/Magenta from avatar outfit */
+    --primary: 330 81% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft pink secondary */
+    --secondary: 330 60% 95%;
+    --secondary-foreground: 330 81% 40%;
+
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Cyan accent from avatar tech elements */
+    --accent: 190 95% 50%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 330 81% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradient colors */
+    --gradient-pink: 330 81% 60%;
+    --gradient-blue: 220 90% 56%;
+    --gradient-cyan: 190 95% 50%;
+    --gradient-navy: 222 47% 11%;
+
+    /* Glow effects */
+    --glow-pink: 330 81% 60%;
+    --glow-cyan: 190 95% 50%;
+  }
+
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 220 20% 95%;
+
+    --card: 222 47% 10%;
+    --card-foreground: 220 20% 95%;
+
+    --popover: 222 47% 10%;
+    --popover-foreground: 220 20% 95%;
+
+    --primary: 330 81% 65%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 222 40% 18%;
+    --secondary-foreground: 330 81% 75%;
+
+    --muted: 222 40% 15%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 190 95% 55%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 40% 20%;
+    --input: 222 40% 20%;
+    --ring: 330 81% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient;
+  }
+
+  .gradient-border {
+    @apply relative before:absolute before:inset-0 before:rounded-[inherit] before:p-[2px] before:bg-gradient-to-r before:from-primary before:via-accent before:to-primary before:-z-10 before:bg-[length:200%_auto] before:animate-gradient;
+  }
+
+  .glass-card {
+    @apply bg-card/70 backdrop-blur-xl border border-border/50 shadow-lg;
+  }
+
+  .glow-pink {
+    box-shadow: 0 0 40px hsl(var(--glow-pink) / 0.3);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 40px hsl(var(--glow-cyan) / 0.3);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl;
+  }
+}
+
+@layer utilities {
+  .animate-gradient {
+    animation: gradient 6s ease infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-sync {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-wave {
+    animation: wave 15s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-right {
+    animation: fadeInRight 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    opacity: 0;
+  }
+
+  .animate-wiggle {
+    animation: wiggle 0.5s ease-in-out;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(-20px) translateY(10px); }
+  50% { transform: translateX(0) translateY(20px); }
+  75% { transform: translateX(20px) translateY(10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Wave background pattern */
+.wave-bg {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at 30% 20%, hsl(var(--gradient-pink) / 0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 80%, hsl(var(--gradient-cyan) / 0.12) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 50%, hsl(var(--gradient-blue) / 0.08) 0%, transparent 60%);
+  animation: wave 15s ease-in-out infinite;
+}
+
+.dark .wave-bg {
+  background: radial-gradient(ellipse at 30% 20%, hsl(var(--gradient-pink) / 0.2) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 80%, hsl(var(--gradient-cyan) / 0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 50%, hsl(var(--gradient-blue) / 0.1) 0%, transparent 60%);
+}
+
+/* Card animation for scroll/hover */
+.card-animate {
+  @apply transition-all duration-300 ease-out;
+}
+
+.card-animate:hover {
+  @apply shadow-[0_8px_30px_hsl(var(--primary)/0.15)];
+}
+
+/* Custom Scrollbar - Light Mode */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--accent)));
+  border-radius: 10px;
+  border: 2px solid hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, hsl(var(--primary)/0.9), hsl(var(--accent)/0.9));
+}
+
+/* Custom Scrollbar - Dark Mode */
+.dark ::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--accent)));
+  border: 2px solid hsl(var(--background));
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary)) hsl(var(--muted));
+}
+
+.dark * {
+  scrollbar-color: hsl(var(--primary)) hsl(var(--background));
+}
