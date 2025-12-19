@@ -150,7 +150,7 @@ export const projects: ProjectDetail[] = [
     subtitle: "Ethical Shopping Guide",
     image: dameerImg,
     category: "Mobile App",
-    overview: "As an Arab engineer, proud of his Palestinian heritage, it was essential for me to express my cause, even if through a small mark in my designs. That is why \"Damir\" was created — an innovative app that empowers Arab consumers to make conscious purchasing decisions, harmonizing with their ethical values through complete transparency of product information.",
+    overview: "As an Arab engineer, proud of her Palestinian heritage, it was essential for me to express my cause, even if through a small mark in my designs. That is why \"Damir\" was created — an innovative app that empowers Arab consumers to make conscious purchasing decisions, harmonizing with their ethical values through complete transparency of product information.",
     problem: "Consumers face challenges distinguishing products that support or conflict with their ethical values, lacking reliable information.",
     solution: [
       "Barcode scanning for instant product information",
