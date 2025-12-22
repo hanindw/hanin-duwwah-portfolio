@@ -248,7 +248,7 @@ export const projects: ProjectDetail[] = [
       "Smooth customer app with live delivery tracking",
     ],
     accentColor: "from-cyan-500 to-teal-600",
-    behanceLink: "#",
+    // behanceLink: "#",
     fullDescription:
       "A comprehensive e-commerce platform connecting local merchants with customers through four integrated interfaces for seamless shopping experience.",
     features: [
