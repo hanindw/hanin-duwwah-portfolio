@@ -122,15 +122,17 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
                 <Eye className="w-4 h-4" />
                 <span>Take Fast View</span>
               </Link>
-              <a
-                href={project.behanceLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-full border-2 border-current text-foreground text-sm font-semibold transition-all duration-300 hover:bg-muted group/btn"
-              >
-                <span>View on Behance</span>
-                <ExternalLink className="w-4 h-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
-              </a>
+              {project.behanceLink && project.behanceLink.trim() !== "" && project.behanceLink !== "#" && (
+                <a
+                  href={project.behanceLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-full border-2 border-current text-foreground text-sm font-semibold transition-all duration-300 hover:bg-muted group/btn"
+                >
+                  <span>View on Behance</span>
+                  <ExternalLink className="w-4 h-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -180,18 +182,18 @@ export function Projects() {
         <ScrollReveal animation="zoom-in" delay={300} className="mt-16 text-center">
           <div className="inline-flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-r from-card/80 to-card/60 backdrop-blur-sm border border-border/50">
             <div className="flex -space-x-3">
-              {projects.slice(0, 4).map((p, i) => (
+              {projects.slice(0, 6).map((p, i) => (
                 <div
                   key={p.id}
                   className={`w-10 h-10 rounded-full bg-gradient-to-r ${p.accentColor} border-2 border-background flex items-center justify-center text-white text-xs font-bold`}
-                  style={{ zIndex: 4 - i }}
+                  style={{ zIndex: 6 - i }}
                 >
                   {p.title[0]}
                 </div>
               ))}
             </div>
             <div className="text-left">
-              <p className="font-display font-bold text-foreground">5 Creative Projects</p>
+              <p className="font-display font-bold text-foreground">6 Creative Projects</p>
               <p className="text-sm text-muted-foreground">Crafted with passion & precision</p>
             </div>
           </div>
