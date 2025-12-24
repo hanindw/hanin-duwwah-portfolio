@@ -401,7 +401,7 @@ export const projects: ProjectDetail[] = [
     title: "Finza Banking System",
     subtitle: "Software Engineering 3 - Design Patterns Project",
     image: finzaImg,
-    category: "Software Engineering",
+    category: "Dashboard System",
     overview:
       "An advanced banking system designed to implement 6+ software design patterns for a Software Engineering course. The project focuses on creating a scalable, maintainable banking platform using behavioral and structural design patterns.",
     problem:
