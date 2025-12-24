@@ -451,16 +451,15 @@ export const projects: ProjectDetail[] = [
       finzaTickets,
     ],
     tools: [
-      "Java",
-      "Spring Boot",
+      "React",
+      "TypeScript",
       "MySQL",
       "Design Patterns",
       "UML",
-      "JUnit",
       "Figma",
     ],
     duration: "1 week",
-    role: "UI/UX Designer,Software Architect , Frontend Developer",
+    role: "UI/UX Designer, Software Architect , Frontend Developer",
   },
 ];
 
