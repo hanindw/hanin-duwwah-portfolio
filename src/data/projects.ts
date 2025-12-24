@@ -4,6 +4,7 @@ import dameerImg from "@/assets/projects/dameer.png";
 import laqtaImg from "@/assets/projects/laqta.png";
 import mubarmijaImg from "@/assets/projects/mubarmija.png";
 import govComplaintsImg from "@/assets/projects/compliants.png";
+import finzaImg from "@/assets/projects/finza.png";
 
 // Reserva project images
 import reservaLogin from "@/assets/projects/reserva/login.png";
@@ -63,6 +64,17 @@ import mobileHome from "@/assets/projects/complaints/homemobile.png";
 import mobileAddComplaint from "@/assets/projects/complaints/addnewmobile.png";
 import mobileDetails from "@/assets/projects/complaints/detailsmobile.png";
 import mobileNotifications from "@/assets/projects/complaints/notificationsmobile.png";
+
+// Finza project images
+import finzaLogin from "@/assets/projects/finza/login.png";
+import finzaOverview from "@/assets/projects/finza/overview.png";
+import finzaTransactions from "@/assets/projects/finza/transactions.png";
+import finzaAddTransaction from "@/assets/projects/finza/add-transaction.png";
+import finzaStatistics from "@/assets/projects/finza/statistics.png";
+import finzaScheduled from "@/assets/projects/finza/scheduled.png";
+import finzaReports from "@/assets/projects/finza/reports.png";
+import finzaTickets from "@/assets/projects/finza/tickets.png";
+import finzaAccounts from "@/assets/projects/finza/accounts.png";
 
 export interface ProjectDetail {
   id: string;
@@ -383,6 +395,72 @@ export const projects: ProjectDetail[] = [
     tools: ["Figma", "Flutter", "Dart", "React", "TypeScript", "Tailwind CSS"],
     duration: "1 month",
     role: "UI/UX Designer & Flutter Developer",
+  },
+  {
+    id: "finza-banking-system",
+    title: "Finza Banking System",
+    subtitle: "Software Engineering 3 - Design Patterns Project",
+    image: finzaImg,
+    category: "Software Engineering",
+    overview:
+      "An advanced banking system designed to implement 6+ software design patterns for a Software Engineering course. The project focuses on creating a scalable, maintainable banking platform using behavioral and structural design patterns.",
+    problem:
+      "Traditional banking systems often become monolithic and difficult to maintain. For this course project, we needed to demonstrate proper software architecture by implementing design patterns to handle complex banking operations while ensuring code reusability and flexibility.",
+    solution: [
+      "Implemented Composite pattern for hierarchical account structures",
+      "Used Observer pattern for real-time notifications on account activities",
+      "Applied Strategy pattern for different interest calculation algorithms",
+      "Utilized State pattern to manage account status transitions",
+      "Implemented Chain of Responsibility for transaction approval workflows",
+      "Used Adapter pattern for integration with external payment gateways",
+    ],
+    accentColor: "from-gray-600 to-gray-800",
+    fullDescription:
+      "This was a Software Engineering 3 course project at Damascus University, focusing on implementing design patterns in a practical banking system. The goal was to build a system that demonstrates the application of 6+ behavioral and structural design patterns while providing core banking functionalities. The system handles account management, transactions, customer service, and administrative controls with proper software architecture principles. The complete source code is available on GitHub: https://github.com/danasaadeh/advanced-banking-system",
+    features: [
+      {
+        title: "Design Patterns Implementation",
+        description:
+          "Successfully implemented 6+ design patterns including Composite, Observer, Strategy, State, Chain of Responsibility, and Adapter patterns",
+      },
+      {
+        title: "Account Management System",
+        description:
+          "Support for multiple account types (savings, checking, loans, investments) with hierarchical structures",
+      },
+      {
+        title: "Transaction Processing",
+        description:
+          "Complete transaction handling for deposits, withdrawals, transfers, with scheduled transactions support",
+      },
+      {
+        title: "Academic Documentation",
+        description:
+          "Complete UML diagrams, design pattern justifications, and comprehensive test coverage as per course requirements",
+      },
+    ],
+    gallery: [
+      finzaLogin,
+      finzaOverview,
+      finzaTransactions,
+      finzaAddTransaction,
+      finzaScheduled,
+      finzaAccounts,
+      finzaStatistics,
+      finzaReports,
+      finzaTickets,
+    ],
+    tools: [
+      "Java",
+      "Spring Boot",
+      "MySQL",
+      "Design Patterns",
+      "UML",
+      "JUnit",
+      "Figma",
+    ],
+    duration: "1 week",
+    role: "UI/UX Designer,Software Architect , Frontend Developer",
   },
 ];
 

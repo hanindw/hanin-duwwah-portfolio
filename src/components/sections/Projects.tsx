@@ -182,18 +182,18 @@ export function Projects() {
         <ScrollReveal animation="zoom-in" delay={300} className="mt-16 text-center">
           <div className="inline-flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-r from-card/80 to-card/60 backdrop-blur-sm border border-border/50">
             <div className="flex -space-x-3">
-              {projects.slice(0, 6).map((p, i) => (
+              {projects.slice(0, 7).map((p, i) => (
                 <div
                   key={p.id}
                   className={`w-10 h-10 rounded-full bg-gradient-to-r ${p.accentColor} border-2 border-background flex items-center justify-center text-white text-xs font-bold`}
-                  style={{ zIndex: 6 - i }}
+                  style={{ zIndex: 7- i }}
                 >
                   {p.title[0]}
                 </div>
               ))}
             </div>
             <div className="text-left">
-              <p className="font-display font-bold text-foreground">6 Creative Projects</p>
+              <p className="font-display font-bold text-foreground">7 Creative Projects</p>
               <p className="text-sm text-muted-foreground">Crafted with passion & precision</p>
             </div>
           </div>
