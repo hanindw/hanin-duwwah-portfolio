@@ -56,7 +56,7 @@ export function Hero() {
 
             <div className="flex items-center justify-center lg:justify-start gap-4 pt-4 animate-fade-in-up delay-500">
               <a
-                href="https://www.linkedin.com/in/hanin-duwwah-7ab4b5312"
+                href="https://www.linkedin.com/in/hanin-duwwah-211835385?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:rotate-6"

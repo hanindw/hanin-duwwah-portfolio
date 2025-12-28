@@ -398,12 +398,12 @@ export const projects: ProjectDetail[] = [
   },
   {
     id: "finza-banking-system",
-    title: "Finza Banking System",
+    title: "Finza",
     subtitle: "Software Engineering 3 - Design Patterns Project",
     image: finzaImg,
     category: "Dashboard System",
     overview:
-      "An advanced banking system designed to implement 6+ software design patterns for a Software Engineering course. The project focuses on creating a scalable, maintainable banking platform using behavioral and structural design patterns.",
+      "An advanced banking system designed to implement 6+ software design patterns . The project focuses on creating a scalable, maintainable banking platform using behavioral and structural design patterns.",
     problem:
       "Traditional banking systems often become monolithic and difficult to maintain. For this course project, we needed to demonstrate proper software architecture by implementing design patterns to handle complex banking operations while ensuring code reusability and flexibility.",
     solution: [
@@ -412,7 +412,7 @@ export const projects: ProjectDetail[] = [
       "Applied Strategy pattern for different interest calculation algorithms",
       "Utilized State pattern to manage account status transitions",
       "Implemented Chain of Responsibility for transaction approval workflows",
-      "Used Adapter pattern for integration with external payment gateways",
+      "Used Facade pattern for integration with React Query",
     ],
     accentColor: "from-gray-600 to-gray-800",
     fullDescription:

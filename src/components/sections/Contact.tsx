@@ -27,7 +27,7 @@ const socialLinks = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/hanin-duwwah-7ab4b5312",
+    href: "https://www.linkedin.com/in/hanin-duwwah-211835385?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     icon: () => (
