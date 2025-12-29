@@ -1,6 +1,8 @@
+
 import { Download, Instagram, Facebook, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import avatarImage from "@/assets/avatar.png";
+import { StarsBackground } from "@/components/ui/StarsBackground";
 
 export function Hero() {
   return (
@@ -8,6 +10,12 @@ export function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
+      {/* النجوم في الخلفية */}
+      <StarsBackground 
+        sectionHeight={1000} 
+        intensity="medium"
+      />
+      
       {/* Animated background */}
       <div className="wave-bg" />
       

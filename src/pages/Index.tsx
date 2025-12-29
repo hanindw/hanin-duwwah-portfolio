@@ -11,6 +11,8 @@ import { Contact } from "@/components/sections/Contact";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <div className="fixed inset-0 bg-gradient-to-b from-background/0 via-background/20 to-background/40 pointer-events-none z-[-1]" />
+      
       <Header />
       <main>
         <Hero />
