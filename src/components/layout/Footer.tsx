@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook, Heart } from "lucide-react";
 
 const quickLinks = [
   { href: "#home", label: "Home" },
@@ -12,13 +12,17 @@ const quickLinks = [
 
 const BehanceIcon = () => (
   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
+    <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
   </svg>
 );
 
 const socialLinks = [
   {
-    icon: () => <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>,
+    icon: () => (
+      <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+      </svg>
+    ),
     href: "https://www.linkedin.com/in/hanin-duwwah-211835385?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     label: "LinkedIn",
   },
@@ -47,17 +51,21 @@ export function Footer() {
       <div className="absolute bottom-0 right-1/3 w-24 h-24 bg-accent/10 rounded-full blur-2xl" />
       <div className="absolute top-1/3 right-1/4 w-20 h-20 bg-primary/5 rounded-full blur-2xl" />
       <div className="absolute bottom-1/3 left-1/2 w-16 h-16 bg-accent/5 rounded-full blur-xl" />
-      
+
       <div className="container relative z-10">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           {/* Brand & About */}
           <div className="space-y-4">
-            <a href="#home" className="text-2xl font-display font-bold gradient-text inline-block">
+            <a
+              href="#home"
+              className="text-2xl font-display font-bold gradient-text inline-block"
+            >
               Hanin Duwwah
             </a>
             <p className="text-muted-foreground leading-relaxed">
-              UI/UX Designer passionate about creating beautiful, functional, 
-              and user-friendly digital experiences through research-driven design.
+              UI/UX Designer passionate about creating beautiful, functional,
+              and user-friendly digital experiences through research-driven
+              design.
             </p>
             <div className="flex items-center gap-3 pt-2">
               {socialLinks.map((link) => (
@@ -115,19 +123,23 @@ export function Footer() {
                 <span>hanindowah@gmail.com</span>
               </a>
             </div>
-            
+
             {/* Available status */}
             <div className="flex items-center gap-2 pt-2">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-sm text-muted-foreground">Available for Projects</span>
+              <span className="text-sm text-muted-foreground">
+                Available for Projects
+              </span>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
+
         <div className="mt-12 pt-8 border-t border-border/50 text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Hanin Duwwah. All rights reserved. Designed with passion.
+          <p className="text-sm text-muted-foreground flex justify-center items-center gap-1">
+            © {new Date().getFullYear()} Eng.Hanin Duwwah. Designed with passion{" "}
+            <Heart color="#ff69b4" size={16} />
           </p>
         </div>
       </div>
