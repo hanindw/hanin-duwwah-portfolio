@@ -73,7 +73,7 @@ export function Hero() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://www.behance.net/haninduwwah"
+                href="https://www.behance.net/haninduwwah43"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
