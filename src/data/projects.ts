@@ -156,7 +156,7 @@ export const projects: ProjectDetail[] = [
     image: umbraImg,
     category: "Dashboard System",
     overview:
-      "A centralized visitor and event management system at Digit Center, designed to organize visitor reception and coordinate events professionally.",
+      "A centralized visitor and event management system , designed to organize visitor reception and coordinate events professionally.",
     problem:
       "Challenges in managing daily visitor flow, organizing events, and accurately recording attendance leading to disorganized experiences.",
     solution: [
@@ -167,7 +167,7 @@ export const projects: ProjectDetail[] = [
     accentColor: "from-violet-500 to-purple-600",
     behanceLink: "#",
     fullDescription:
-      "A centralized visitor and event management system at Digit Center, designed to organize visitor reception and coordinate events professionally with seamless tracking capabilities.",
+      "A centralized visitor and event management system , designed to organize visitor reception and coordinate events professionally with seamless tracking capabilities.",
     features: [
       {
         title: "Visitor Management",
@@ -193,7 +193,7 @@ export const projects: ProjectDetail[] = [
       umbraAssignDialog,
     ],
     tools: ["Figma", "React", "VS Code"],
-    duration: "4 months (still undergoing edits)",
+    duration: "4 months",
     role: "UI/UX Designer, UI Developer",
   },
   {
