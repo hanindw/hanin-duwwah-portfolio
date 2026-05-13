@@ -28,9 +28,9 @@ const experiences = [
     current: false,
   },
   {
-    title: "UI/UX Design Volunteer",
+    title: "UI/UX Design Intern",
     company: "Digit Innovation Center",
-    period: "Dec 2025 – Present",
+    period: "Dec 2025 – Feb 2025",
     location: "Damascus",
     description: [
       "Collaborated with developers to ensure design feasibility and implementation accuracy",
