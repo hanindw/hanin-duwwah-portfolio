@@ -28,7 +28,7 @@ const socialLinks = [
   },
   {
     icon: BehanceIcon,
-    href: "https://www.behance.net/haninduwwah43",
+    href: "https://www.behance.net/haninduwwah4343",
     label: "Behance",
   },
   {

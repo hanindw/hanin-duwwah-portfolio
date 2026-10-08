@@ -36,7 +36,7 @@ const socialLinks = [
       </svg>
     ),
     label: "Behance",
-    href: "https://www.behance.net/haninduwwah",
+    href: "https://www.behance.net/haninduwwah43",
   },
   {
     icon: Instagram,
