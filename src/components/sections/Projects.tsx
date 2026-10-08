@@ -186,14 +186,14 @@ export function Projects() {
                 <div
                   key={p.id}
                   className={`w-10 h-10 rounded-full bg-gradient-to-r ${p.accentColor} border-2 border-background flex items-center justify-center text-white text-xs font-bold`}
-                  style={{ zIndex: 7- i }}
+                  style={{ zIndex: 8- i }}
                 >
                   {p.title[0]}
                 </div>
               ))}
             </div>
             <div className="text-left">
-              <p className="font-display font-bold text-foreground">7 Creative Projects</p>
+              <p className="font-display font-bold text-foreground"> 8 Creative Projects</p>
               <p className="text-sm text-muted-foreground">Crafted with passion & precision</p>
             </div>
           </div>

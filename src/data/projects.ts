@@ -6,6 +6,24 @@ import mubarmijaImg from "@/assets/projects/mubarmija.png";
 import govComplaintsImg from "@/assets/projects/compliants.png";
 import finzaImg from "@/assets/projects/finza.png";
 
+import wapImg from "@/assets/projects/wap.png";
+
+// WAP project images
+import wapDashboard from "@/assets/projects/wap/dashboard.png";
+import wapWorkflows from "@/assets/projects/wap/workflows.png";
+import wapTemplates from "@/assets/projects/wap/templates.png";
+import wapBuilder from "@/assets/projects/wap/builder.png";
+import wapTasks from "@/assets/projects/wap/tasks.png";
+import wapAnalytics from "@/assets/projects/wap/analytics.png";
+import wapRecommendations from "@/assets/projects/wap/recommendations.png";
+import wapKnowledgeBase from "@/assets/projects/wap/knowledge-base.png";
+import wapDarkMode from "@/assets/projects/wap/dark-mode.png";
+import wapMobileHome from "@/assets/projects/wap/mobile-home.jpg";
+import wapMobileTasks from "@/assets/projects/wap/mobile-tasks.jpg";
+import wapMobileForm from "@/assets/projects/wap/mobile-form.jpg";
+import wapMobileTimeline from "@/assets/projects/wap/mobile-timeline.jpg";
+import wapMobileComments from "@/assets/projects/wap/mobile-comments.jpg";
+
 // Reserva project images
 import reservaLogin from "@/assets/projects/reserva/login.png";
 import reservaAttractions from "@/assets/projects/reserva/attractions.png";
@@ -99,6 +117,122 @@ export interface ProjectDetail {
 }
 
 export const projects: ProjectDetail[] = [
+    {
+    id: "wap",
+    title: "WAP",
+    subtitle: "Workflow Automation Platform",
+    image: wapImg,
+    category: "Full Platform",
+    overview:
+      "A no-code SaaS platform where companies draw a business process once, then let the system run it, assign every step to a named person and keep the context in front of them until it is done. Built as my graduation project across a web app and a mobile app.",
+    problem:
+      "Deals are rarely lost to bad work. They are lost between hand-offs. When a request passes from sales to a technical lead to a pricing manager, each person does their part, yet the file can stall in the middle with nobody noticing. Existing automation tools connect apps well but give employees no single place to see their own work, its deadline and who currently holds it.",
+    solution: [
+      "A visual workflow builder with a node palette, validation and versioned publishing",
+      "A unified task board with live deadlines on web and mobile, so every step has an owner",
+      "Dynamic flows that pause on an exception and let a manager design the missing steps on the spot",
+      "Four-tier permissions so each role sees only the interface that matches their responsibility",
+    ],
+    accentColor: "from-[#F06292] to-[#FF91BB]",
+    behanceLink: "https://www.behance.net/gallery/256629419/WAP-Workflow-Automation-Platform",
+    fullDescription:
+      "WAP is my graduation project, built between April and August 2026. It is a multi-tenant, no-code workflow platform for small and mid-sized tech companies. I researched the problem by comparing Zapier, Make, n8n and Gumloop and by interviewing the sales team at Tradinos and the CEO of Devista. Four gaps came out of that work: no unified task view, no knowledge base connected to the automation, flat permissions, and workflows that cannot adapt while they run. Each gap became a core design decision. I was the UX researcher and UI designer for the whole platform, including a design system with light and dark modes and six customizable primary colors, and I developed the mobile app in Flutter.",
+    features: [
+      {
+        title: "Visual Workflow Builder",
+        description:
+          "Drag-and-drop canvas with triggers, actions, logic, AI agents and integration nodes, plus validation before publishing and version history",
+      },
+      {
+        title: "Unified Task Experience",
+        description:
+          "Employees see every assigned task with its deadline, form, timeline, files and comments on mobile, without needing to understand the whole workflow",
+      },
+      {
+        title: "Analytics and Recommendations",
+        description:
+          "Execution metrics, a system health grade and a ranked table of bottlenecks with the numbers behind each issue and a suggested fix",
+      },
+      {
+        title: "Knowledge Base and Integrations",
+        description:
+          "Company documents that AI nodes can draw on, with ClickUp, Google Workspace and HubSpot connected in one click",
+      },
+      {
+        title: "Themeable Design System",
+        description:
+          "Light and dark appearance with six primary colors that each company can choose, applied across the whole product",
+      },
+    ],
+    gallery: [
+      wapDashboard,
+      wapWorkflows,
+      wapTemplates,
+      wapBuilder,
+      wapTasks,
+      wapAnalytics,
+      wapRecommendations,
+      wapKnowledgeBase,
+      wapDarkMode,
+      wapMobileHome,
+      wapMobileTasks,
+      wapMobileForm,
+      wapMobileTimeline,
+      wapMobileComments,
+    ],
+    tools: ["Figma", "Flutter", "Dart", "React", "Laravel", "PostgreSQL"],
+    duration: "5 months",
+    role: "UX Researcher, UI Designer & Flutter Developer",
+  },
+  {
+    id: "laqta",
+    title: "Laqta",
+    subtitle: "Multi-Role E-Commerce Platform",
+    image: laqtaImg,
+    category: "Full Platform",
+    overview:
+      "A comprehensive e-commerce platform connecting local merchants with customers through four integrated interfaces.",
+    problem:
+      "Local e-commerce faces integration challenges between merchants, customers, and drivers, limiting market growth.",
+    solution: [
+      "Integrated management dashboard for platform oversight",
+      "Smart driver app with navigation and order tracking",
+      "Smooth customer app with live delivery tracking",
+    ],
+    accentColor: "from-cyan-500 to-teal-600",
+    // behanceLink: "#",
+    fullDescription:
+      "A comprehensive e-commerce platform connecting local merchants with customers through four integrated interfaces for seamless shopping experience.",
+    behanceLink:"https://www.behance.net/gallery/256638817/Lakta-Multi-Surface-E-Commerce-Logistics-Marketplace",
+      features: [
+      {
+        title: "Management Dashboard",
+        description:
+          "Integrated management dashboard for complete platform oversight",
+      },
+      {
+        title: "Driver App",
+        description: "Smart driver app with navigation and order tracking",
+      },
+      {
+        title: "Customer App",
+        description: "Smooth customer app with live delivery tracking",
+      },
+    ],
+    gallery: [
+      laqtaMerchantDashboard,
+      laqtaAdminDashboard,
+      laqtaUsers,
+      laqtaMerchants,
+      laqtaDriverHome,
+      laqtaOrderDetails,
+      laqtaProductDetails,
+      laqtaCustomerHome,
+    ],
+    tools: ["Figma"],
+    duration: "2 months",
+    role: "UI/UX Designer",
+  },
   {
     id: "reserva",
     title: "Reserva",
@@ -242,54 +376,6 @@ export const projects: ProjectDetail[] = [
     ],
     tools: ["Figma"],
     duration: "2 weeks",
-    role: "UI/UX Designer",
-  },
-  {
-    id: "laqta",
-    title: "Laqta",
-    subtitle: "Multi-Role E-Commerce Platform",
-    image: laqtaImg,
-    category: "Full Platform",
-    overview:
-      "A comprehensive e-commerce platform connecting local merchants with customers through four integrated interfaces.",
-    problem:
-      "Local e-commerce faces integration challenges between merchants, customers, and drivers, limiting market growth.",
-    solution: [
-      "Integrated management dashboard for platform oversight",
-      "Smart driver app with navigation and order tracking",
-      "Smooth customer app with live delivery tracking",
-    ],
-    accentColor: "from-cyan-500 to-teal-600",
-    // behanceLink: "#",
-    fullDescription:
-      "A comprehensive e-commerce platform connecting local merchants with customers through four integrated interfaces for seamless shopping experience.",
-    features: [
-      {
-        title: "Management Dashboard",
-        description:
-          "Integrated management dashboard for complete platform oversight",
-      },
-      {
-        title: "Driver App",
-        description: "Smart driver app with navigation and order tracking",
-      },
-      {
-        title: "Customer App",
-        description: "Smooth customer app with live delivery tracking",
-      },
-    ],
-    gallery: [
-      laqtaMerchantDashboard,
-      laqtaAdminDashboard,
-      laqtaUsers,
-      laqtaMerchants,
-      laqtaDriverHome,
-      laqtaOrderDetails,
-      laqtaProductDetails,
-      laqtaCustomerHome,
-    ],
-    tools: ["Figma"],
-    duration: "2 months",
     role: "UI/UX Designer",
   },
   {
