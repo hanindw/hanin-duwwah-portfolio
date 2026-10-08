@@ -7,7 +7,7 @@ import { projects } from '@/data/projects';
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [activeTab, setActiveTab] = useState<'overview' | 'problem' | 'solution'>('overview');
-
+  
   return (
     <ScrollReveal
       animation={index % 2 === 0 ? 'fade-right' : 'fade-left'}
@@ -113,13 +113,13 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
               </div>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="mt-6 flex flex-wrap gap-3">
+            {/* CTA Buttons - Larger height on mobile, side by side */}
+            <div className="mt-6 flex flex-row items-center gap-2 sm:gap-3">
               <Link
                 to={`/project/${project.id}`}
-                className={`inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-full bg-gradient-to-r ${project.accentColor} text-white text-sm font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 group/btn`}
+                className={`inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-3 sm:py-3 rounded-full bg-gradient-to-r ${project.accentColor} text-white text-xs sm:text-sm font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 group/btn flex-1 sm:flex-none whitespace-nowrap`}
               >
-                <Eye className="w-4 h-4" />
+                <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                 <span>Take Fast View</span>
               </Link>
               {project.behanceLink && project.behanceLink.trim() !== "" && project.behanceLink !== "#" && (
@@ -127,10 +127,10 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
                   href={project.behanceLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-full border-2 border-current text-foreground text-sm font-semibold transition-all duration-300 hover:bg-muted group/btn"
+                  className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-3 sm:py-3 rounded-full border-2 border-current text-foreground text-xs sm:text-sm font-semibold transition-all duration-300 hover:bg-muted group/btn flex-1 sm:flex-none whitespace-nowrap"
                 >
                   <span>View on Behance</span>
-                  <ExternalLink className="w-4 h-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
+                  <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
                 </a>
               )}
             </div>
