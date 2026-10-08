@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Download, Sparkles } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github, Download, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
@@ -27,26 +27,21 @@ const socialLinks = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/hanin-duwwah-211835385?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    href: "https://www.linkedin.com/in/hanin-duwwah-211835385",
   },
   {
     icon: () => (
       <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
+        <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
       </svg>
     ),
     label: "Behance",
     href: "https://www.behance.net/haninduwwah43",
   },
   {
-    icon: Instagram,
-    label: "Instagram",
-    href: "https://www.instagram.com/hanin_duwwah?igsh=ZGJ1cGthdmkzbnk5",
-  },
-  {
-    icon: Facebook,
-    label: "Facebook",
-    href: "https://www.facebook.com/share/1CsDTtAMa6/",
+    icon: Github,
+    label: "GitHub",
+    href: "https://github.com/hanindw",
   },
 ];
 
@@ -64,7 +59,7 @@ export function Contact() {
             Let's Work <span className="gradient-text">Together</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to collaborate on your next project? I'm always open to discussing new opportunities 
+            Ready to collaborate on your next project? I'm always open to discussing new opportunities
             and creative challenges.
           </p>
         </ScrollReveal>
@@ -106,13 +101,15 @@ export function Contact() {
               <ScrollReveal animation="fade-left" delay={100}>
                 <div className="glass-card rounded-2xl p-6 card-animate">
                   <h3 className="font-semibold mb-4">Connect with me</h3>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-3 gap-4">
                     {socialLinks.map((link) => (
                       <a
                         key={link.label}
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={link.label}
+                        title={link.label}
                         className="flex flex-col items-center gap-2 p-4 rounded-xl bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:rotate-2 group"
                       >
                         <link.icon className="h-6 w-6" />

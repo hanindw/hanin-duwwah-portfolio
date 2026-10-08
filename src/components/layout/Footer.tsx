@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Instagram, Facebook, Heart } from "lucide-react";
+import { Mail, Phone, MapPin, Heart, Linkedin, Github } from "lucide-react";
 
 const quickLinks = [
   { href: "#home", label: "Home" },
@@ -18,28 +18,19 @@ const BehanceIcon = () => (
 
 const socialLinks = [
   {
-    icon: () => (
-      <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-      </svg>
-    ),
-    href: "https://www.linkedin.com/in/hanin-duwwah-211835385?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/hanin-duwwah-211835385",
     label: "LinkedIn",
   },
   {
     icon: BehanceIcon,
-    href: "https://www.behance.net/haninduwwah4343",
+    href: "https://www.behance.net/haninduwwah43",
     label: "Behance",
   },
   {
-    icon: Instagram,
-    href: "https://www.instagram.com/hanin_duwwah?igsh=ZGJ1cGthdmkzbnk5",
-    label: "Instagram",
-  },
-  {
-    icon: Facebook,
-    href: "https://www.facebook.com/share/1CsDTtAMa6/",
-    label: "Facebook",
+    icon: Github,
+    href: "https://github.com/hanindw",
+    label: "GitHub",
   },
 ];
 
@@ -55,7 +46,7 @@ export function Footer() {
       <div className="container relative z-10">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           {/* Brand & About */}
-          <div className="space-y-4">
+          <div className="space-y-5">
             <a
               href="#home"
               className="text-2xl font-display font-bold gradient-text inline-block"
@@ -67,6 +58,8 @@ export function Footer() {
               and user-friendly digital experiences through research-driven
               design.
             </p>
+
+            {/* Social icons — same style as Hero */}
             <div className="flex items-center gap-3 pt-2">
               {socialLinks.map((link) => (
                 <a
@@ -74,10 +67,11 @@ export function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
                   aria-label={link.label}
+                  title={link.label}
+                  className="w-11 h-11 rounded-full bg-muted/50 border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:-translate-y-1 transition-all duration-300"
                 >
-                  <link.icon className="h-4 w-4" />
+                  <link.icon className="h-5 w-5" />
                 </a>
               ))}
             </div>
@@ -134,13 +128,31 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
+        {/* Bottom bar — creative closing */}
+        <div className="mt-14 pt-8 border-t border-border/50">
+          <div className="relative flex flex-col items-center gap-4 text-center">
+            {/* Decorative gradient line */}
+            <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-28 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-        <div className="mt-12 pt-8 border-t border-border/50 text-center">
-          <p className="text-sm text-muted-foreground flex justify-center items-center gap-1">
-            © {new Date().getFullYear()} Eng.Hanin Duwwah. Designed with passion{" "}
-            <Heart color="#ff69b4" size={16} />
-          </p>
+            {/* Copyright */}
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()}{" "}
+              <span className="font-medium text-foreground">
+                Eng. Hanin Duwwah
+              </span>
+            </p>
+
+            {/* Creative tagline */}
+            <p className="text-sm text-muted-foreground flex flex-wrap items-center justify-center gap-1.5 max-w-md leading-relaxed">
+              <span>Crafted with</span>
+              <Heart className="h-3.5 w-3.5 text-pink-500 fill-pink-500 animate-pulse shrink-0" />
+              <span>&amp; a passion for detail</span>
+              <span className="hidden sm:inline text-primary/60">•</span>
+              <span className="gradient-text font-medium">
+                Turning ideas into pixel-perfect experiences
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
