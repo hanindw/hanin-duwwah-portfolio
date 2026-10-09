@@ -7,7 +7,7 @@ import { projects } from '@/data/projects';
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [activeTab, setActiveTab] = useState<'overview' | 'problem' | 'solution'>('overview');
-  
+
   return (
     <ScrollReveal
       animation={index % 2 === 0 ? 'fade-right' : 'fade-left'}
@@ -21,7 +21,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
       >
         {/* Animated gradient border */}
         <div className={`absolute inset-0 bg-gradient-to-r ${project.accentColor} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-3xl`} />
-        
+
         {/* Floating decorative elements */}
         <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
         <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-tr from-accent/20 to-primary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -37,7 +37,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
               decoding="sync"
               className={`w-full h-64 lg:h-96 object-cover transition-transform duration-700 ${isHovered ? 'scale-110' : 'scale-100'}`}
             />
-            
+
             {/* Category Badge */}
             <div className="absolute top-4 left-4 z-20">
               <span className={`px-4 py-2 rounded-full text-xs font-semibold bg-gradient-to-r ${project.accentColor} text-white shadow-lg`}>
@@ -62,8 +62,8 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
               </h3>
               <p className="text-muted-foreground text-sm mb-6">{project.subtitle}</p>
 
-              {/* Tab Navigation */}
-              <div className="flex gap-2 mb-6 flex-wrap">
+              {/* Tab Navigation — compact on mobile, original on lg */}
+              <div className="flex gap-1 lg:gap-2 mb-6 flex-nowrap">
                 {[
                   { key: 'overview', label: 'Overview', icon: Sparkles },
                   { key: 'problem', label: 'Problem', icon: Target },
@@ -72,13 +72,13 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
                   <button
                     key={key}
                     onClick={() => setActiveTab(key as typeof activeTab)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    className={`flex items-center gap-1 lg:gap-2 px-2 lg:px-4 py-2 rounded-full text-[11px] lg:text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                       activeTab === key
                         ? `bg-gradient-to-r ${project.accentColor} text-white shadow-lg`
                         : 'bg-muted/50 text-muted-foreground hover:bg-muted'
                     }`}
                   >
-                    <Icon className="w-4 h-4" />
+                    <Icon className="w-3 h-3 lg:w-4 lg:h-4 flex-shrink-0" />
                     {label}
                   </button>
                 ))}
@@ -113,7 +113,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
               </div>
             </div>
 
-            {/* CTA Buttons - Larger height on mobile, side by side */}
+            {/* CTA Buttons */}
             <div className="mt-6 flex flex-row items-center gap-2 sm:gap-3">
               <Link
                 to={`/project/${project.id}`}
@@ -159,14 +159,14 @@ export function Projects() {
             <span className="text-sm font-medium text-primary">Featured Work</span>
           </div>
           <h2 className="text-4xl lg:text-6xl font-display font-bold mb-6">
-            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            <span className="gradient-text">
               Creative Projects
             </span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Discover my journey through design challenges, where each project tells a unique story of 
-            <span className="text-primary font-medium"> innovation</span>, 
-            <span className="text-accent font-medium"> creativity</span>, and 
+            Discover my journey through design challenges, where each project tells a unique story of
+            <span className="text-primary font-medium"> innovation</span>,
+            <span className="text-accent font-medium"> creativity</span>, and
             <span className="text-secondary font-medium"> impact</span>.
           </p>
         </ScrollReveal>
@@ -186,7 +186,7 @@ export function Projects() {
                 <div
                   key={p.id}
                   className={`w-10 h-10 rounded-full bg-gradient-to-r ${p.accentColor} border-2 border-background flex items-center justify-center text-white text-xs font-bold`}
-                  style={{ zIndex: 8- i }}
+                  style={{ zIndex: 8 - i }}
                 >
                   {p.title[0]}
                 </div>
