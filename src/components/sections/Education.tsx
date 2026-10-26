@@ -6,7 +6,7 @@ const education = [
     icon: GraduationCap,
     title: "Bachelor of Information Technology Engineering",
     institution: "Damascus University",
-    period: "2021 – 2026 Expected",
+    period: "2021 – 2026 ",
     description: "Specialization in Software Engineering and Information Systems",
   },
   {

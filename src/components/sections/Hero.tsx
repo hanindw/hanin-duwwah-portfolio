@@ -34,7 +34,7 @@ export function Hero() {
             </h1>
 
             <p className="text-xl sm:text-2xl lg:text-3xl font-light text-muted-foreground animate-fade-in-up delay-200">
-              UI/UX Designer
+              Software Engineer & UI/UX Designer
             </p>
 
             <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up delay-300">

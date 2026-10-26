@@ -30,7 +30,7 @@ const experiences = [
   {
     title: "UI/UX Design Intern",
     company: "Digit Innovation Center",
-    period: "Dec 2025 – Feb 2025",
+    period: "Oct 2026 – Feb 2027 Expected",
     location: "Damascus",
     description: [
       "Collaborated with developers to ensure design feasibility and implementation accuracy",
